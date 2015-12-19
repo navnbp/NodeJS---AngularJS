@@ -1,0 +1,25 @@
+[
+	{
+		"date": "September 6",
+		"text": "2000 is the year that the last wholly Swedish-owned arms manufacturer, Bofors, is sold to American arms manufacturer United Defense on September 6th.",
+		"number": 2000,
+		"found": true,
+		"type": "year",
+		"saved": "Mon Oct 19 2015 20:41:23 GMT-0400 (Eastern Daylight Time)"
+	},
+	{
+		"text": "January 12th is the day in 2006 that a stampede during the Stoning of the Devil ritual on the last day at the Hajj in Mina, Saudi Arabia, kills at least 362 Muslim pilgrims.",
+		"year": 2006,
+		"number": 12,
+		"found": true,
+		"type": "date",
+		"saved": "Mon Oct 19 2015 20:42:01 GMT-0400 (Eastern Daylight Time)"
+	},
+	{
+		"text": "2000 is a boring number.",
+		"number": 2000,
+		"found": false,
+		"type": "math",
+		"saved": "Mon Oct 19 2015 20:42:57 GMT-0400 (Eastern Daylight Time)"
+	}
+]

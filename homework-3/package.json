@@ -1,0 +1,15 @@
+{
+  "name": "homework-3",
+  "version": "1.0.0",
+  "description": "AngularJS HomeWork 3",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naveen B P <navnbp@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "superagent": "^1.4.0",
+    "yargs": "^3.27.0"
+  }
+}

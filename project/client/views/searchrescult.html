@@ -1,0 +1,27 @@
+
+<div>
+ <span ng-if="rescultdata"><h1> <small>Search Rescult</small></h1></span> </br>
+ </div>
+<div  ng-repeat="res in rescultdata">
+<div class="container">
+  <div class="jumbotron">
+		<div class="row">
+
+    		<div class="col-sm-4" >
+    			<img src="{{res.show.image.medium || './images/NoImageFound.jpg' }}" alt="Image Not Available" class="img-rounded img-responsive myimg "  style="width:304px;height:228px;">
+			</div>
+    		<div class="col-sm-8" >
+				<h1><p class="lead" >{{res.show.name}}</p></h1>
+    			<p class="text-info lead" ng-bind-html = "res.show.summary || 'N/A' | filterHTML"></p> 
+
+    		</div>
+            
+	   </div>
+            <div  class="btn-group-vertical pull-right" >
+                 <a ng-href = "/show/{{res.show.id}}" class = "btn btn-warning btn pull-right">Details</a>     
+            </div>
+</div>
+</br>
+
+</div>
+

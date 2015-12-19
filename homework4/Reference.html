@@ -1,0 +1,367 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="page-header">
+			<h1>Midterm Team Manager <small>CS 454</small></h1>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Add Group</h3>
+				<hr />
+
+				<form>				  
+				  <div class="form-group">
+				    <label for="newModuleName">Node Module</label>
+				    <input type="text" class="form-control" id="newModuleName" placeholder="Enter the module name">
+				  </div>
+				  <div class="form-group">
+				    <label for="newModuleDescription">Description</label>
+				    <textarea class="form-control" rows="4" id="newModuleDescription" placeholder="Enter a description of the node module"></textarea>
+				  </div>
+				  <div class="form-group text-center">
+				  	<button type="submit" class="btn btn-primary">Add Group</button>
+				  </div>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h3>Add Student</h3>
+				<hr />
+				<form>
+				  <div class="form-group">
+				    <label for="newStudentName">Student Name</label>
+				    <input type="text" class="form-control" id="newStudentName" placeholder="Enter the student's name">
+				  </div>
+
+				  <div class="form-group">
+				    <label for="targetGroup">Group</label>
+				    <select class="form-control">
+					  <option value="">Socket.IO</option>
+					  <option value="">Mongoose</option>
+					  <option value="">Express</option>					  
+					</select>
+				  </div>
+				  
+				  <div class="form-group text-center">
+				  	<button type="submit" class="btn btn-primary">Add Student</button>
+				  </div>
+				</form>
+			</div>
+			<div class="col-md-4">
+				<h3>Add Task</h3>
+				<hr />
+				<form>
+				  <div class="form-group">
+				    <label for="newTaskText">Task</label>
+				    <input type="text" class="form-control" id="newTaskText" placeholder="Enter the task description">
+				  </div>
+				  <div class="form-group">
+				    <label for="targetGroup">Group</label>
+				    <select class="form-control">
+					  <option value="">Socket.IO</option>
+					  <option value="">Mongoose</option>
+					  <option value="">Express</option>
+					</select>
+				  </div>
+
+				  
+				  <div class="form-group text-center">
+				  	<button type="submit" class="btn btn-primary">Add Task</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+
+		<h3>Groups <small>3 Total</small></h3>
+		<hr />	
+
+        <!-- 
+            Note: You should use ng-repeat to generate 'rows' for each of your groups 
+                  Here, I have included 3 rows, but your HTML should only have 1 (your Angular Template).                  
+        -->	
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div class="panel-title">
+                            Socket.IO
+                            <span class="pull-right glyphicon glyphicon-trash"></span>
+                        </div>
+					</div>
+					<div class="panel-body">
+						<h3>Description</h3>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quas libero praesentium tempora eius dicta provident maiores, ducimus expedita.</p>
+						
+						<div class="row">
+							<div class="col-md-3">
+								<h3>Members <small>4 Total</small></h3>
+                                <hr />
+
+                                <!-- Note: Here, you should use ng-repeat to list all students who are part of this group. -->
+								<ul class="list-unstyled">
+									<li>Student 1 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+									<li>Student 2 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+									<li>Student 3 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+									<li>Student 4 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+								</ul>
+							</div>
+							<div class="col-md-8">
+								<h3>Tasks <small>0 of 5 Completed</small></h3>
+                                <hr />
+								
+                                <ul class="list-unstyled">
+                                    <!-- Note: Here, you should use ng-repeat to iterate 
+                                               over all of the tasks associated with the current group   -->
+                                    <li>
+                                        <select name="" id="">
+                                            <!-- Note: Here, you should use ng-repeat to iterate
+                                                       over all students in this group -->
+                                            <option value="">Student 1</option>
+                                            <option value="">Student 2</option>
+                                            <option value="">Student 3</option>
+                                            <option value="">Student 4</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut!
+                                        <!-- Note: Consider binding a click event to the anchor tag below to
+                                                   remove this task -->
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <!-- Note:  I have included the HTML for additional tasks, but 
+                                                your HTML should only include the HTML for 
+                                                a single task (your Angular template).  As you iterate
+                                                over all of your tasks, the template HTML will be duplicated
+                                                automatically. -->
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 1</option>
+                                            <option value="">Student 2</option>
+                                            <option value="">Student 3</option>
+                                            <option value="">Student 4</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Voluptatum atque delectus totam, repellat quae laborum magni nemo iure.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 1</option>
+                                            <option value="">Student 2</option>
+                                            <option value="">Student 3</option>
+                                            <option value="">Student 4</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Qui quam quae repellendus, ducimus fugiat minus ab autem quod.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 1</option>
+                                            <option value="">Student 2</option>
+                                            <option value="">Student 3</option>
+                                            <option value="">Student 4</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Explicabo sapiente, commodi sequi ducimus id officia animi, consectetur ut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 1</option>
+                                            <option value="">Student 2</option>
+                                            <option value="">Student 3</option>
+                                            <option value="">Student 4</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Vitae quas officiis numquam error incidunt consectetur dolore ullam aut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">Mongoose<span class="pull-right glyphicon glyphicon-trash"></span></div>
+                    </div>
+                    <div class="panel-body">
+                        <h3>Description</h3>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quas libero praesentium tempora eius dicta provident maiores, ducimus expedita.</p>
+                        
+                        <!-- .row>.col-md-6*2>h3{Members}+ul.list-unstyled>li{Student $}*4 -->
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h3>Members <small>3 Total</small></h3>
+                                <hr />
+                                <ul class="list-unstyled">
+                                    <li>Student 5 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                    <li>Student 6 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                    <li>Student 7 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Tasks <small>0 of 4 Completed</small></h3>
+                                <hr />
+                                <!--
+                                ul.list-unstyled>li*5>select>option{Student $}*4^{ }label>input[type=checkbox]{ }+lorem10
+                                -->
+                                <ul class="list-unstyled">                                    
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 5</option>
+                                            <option value="">Student 6</option>
+                                            <option value="">Student 7</option>                                            
+                                        </select> 
+                                        <input type="checkbox">
+                                        Voluptatum atque delectus totam, repellat quae laborum magni nemo iure.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 5</option>
+                                            <option value="">Student 6</option>
+                                            <option value="">Student 7</option>                                            
+                                        </select> 
+                                        <input type="checkbox">
+                                        Qui quam quae repellendus, ducimus fugiat minus ab autem quod.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 5</option>
+                                            <option value="">Student 6</option>
+                                            <option value="">Student 7</option>                                            
+                                        </select> 
+                                        <input type="checkbox">
+                                        Explicabo sapiente, commodi sequi ducimus id officia animi, consectetur ut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 5</option>
+                                            <option value="">Student 6</option>
+                                            <option value="">Student 7</option>                                            
+                                        </select> 
+                                        <input type="checkbox">
+                                        Vitae quas officiis numquam error incidunt consectetur dolore ullam aut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-title">Express<span class="pull-right glyphicon glyphicon-trash"></span></div>
+                    </div>
+                    <div class="panel-body">
+                        <h3>Description</h3>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quas libero praesentium tempora eius dicta provident maiores, ducimus expedita.</p>
+                        
+                        <!-- .row>.col-md-6*2>h3{Members}+ul.list-unstyled>li{Student $}*4 -->
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h3>Members <small>4 Total</small></h3>
+                                <hr />
+                                <ul class="list-unstyled">
+                                    <li>Student 8 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                    <li>Student 9 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                    <li>Student 10 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                    <li>Student 11 <a href="#"><span class="glyphicon glyphicon-trash"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Tasks <small>0 of 5 Completed</small></h3>
+                                <hr />
+                               
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 8</option>
+                                            <option value="">Student 9</option>
+                                            <option value="">Student 10</option>
+                                            <option value="">Student 11</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut!
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 8</option>
+                                            <option value="">Student 9</option>
+                                            <option value="">Student 10</option>
+                                            <option value="">Student 11</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Voluptatum atque delectus totam, repellat quae laborum magni nemo iure.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 8</option>
+                                            <option value="">Student 9</option>
+                                            <option value="">Student 10</option>
+                                            <option value="">Student 11</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Qui quam quae repellendus, ducimus fugiat minus ab autem quod.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 8</option>
+                                            <option value="">Student 9</option>
+                                            <option value="">Student 10</option>
+                                            <option value="">Student 11</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Explicabo sapiente, commodi sequi ducimus id officia animi, consectetur ut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                    <li>
+                                        <select name="" id="">
+                                            <option value="">Student 8</option>
+                                            <option value="">Student 9</option>
+                                            <option value="">Student 10</option>
+                                            <option value="">Student 11</option>
+                                        </select> 
+                                        <input type="checkbox">
+                                        Vitae quas officiis numquam error incidunt consectetur dolore ullam aut.
+                                        <a href="#"><span class="glyphicon glyphicon-trash"></span></a>
+                                    </li>
+                                </ul>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+
+	</div>
+
+
+</body>
+</html>
